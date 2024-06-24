@@ -1,1 +1,44 @@
+<h>Select Dog</h><br>
+<div>
+<h1 id="buttons"></h1>
+</div>
 
+<script>
+var buttons = document.getElementById("buttons");
+
+var Rito_btn = document.createElement("Button");
+var Tato_btn = document.createElement("Button");
+var Both_btn = document.createElement("Button");
+
+Rito_btn.innerText = "Rito";
+Tato_btn.innerText = "Tato";
+Both_btn.innerText = "Both";
+
+
+Rito_btn.onclick = showRito;
+Tato_btn.onclick = showTato;
+Both_btn.onclick = showBoth;
+
+
+buttons.appendChild(Rito_btn);
+buttons.appendChild(Tato_btn);
+buttons.appendChild(Both_btn);
+
+showBoth()
+
+function showRito() {
+  Both_btn.disabled = false;
+  Rito_btn.disabled = true;
+  Tato_btn.disabled = false;
+}
+function showTato() {
+  Both_btn.disabled = false;
+  Rito_btn.disabled = false;
+  Tato_btn.disabled = true;
+}
+function showBoth() {
+  Both_btn.disabled = true;
+  Rito_btn.disabled = false;
+  Tato_btn.disabled = false;
+}
+</script>
